@@ -1,0 +1,5 @@
+# Install one minimal Host row for this bundle. Add business dependencies only
+# after querying and validating their current DSH contracts in creation mode.
+- insert:
+    - id: skillre-pomodoro
+      name: '@skillre/dsh-plugin-pomodoro'

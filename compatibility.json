@@ -1,0 +1,19 @@
+{
+  "schemaVersion": 1,
+  "package": "@skillre/dsh-plugin-pomodoro",
+  "verified": [],
+  "observations": [
+    {
+      "dsh": "0.1.7-rc.2",
+      "observedAt": "2026-09-30",
+      "install": "packed tarball installed into the `desktop` profile via plugin_manager install_bundle; application: applied",
+      "checks": ["artifact-envelope", "live-client-slots"],
+      "evidence": {
+        "artifact-envelope": "tests/client-bundle.spec.ts loads lib/client.js through window.__ModuleLoader__.load and asserts one registration, exactly one external (react) and the injected Cordis contract",
+        "live-client-slots": "cordis_inspect_query Slots.listSubTree reports `skillre-pomodoro` as an active occupant of conversation.composer.dock (order 10) and settings.section (order 30)"
+      },
+      "pending": ["dump-config", "bounded-startup", "browser"],
+      "pendingDetail": "Visual rendering, light/dark appearance and interaction in the Web UI were NOT verified: browser control was unavailable in this environment (CDP could not read Chrome's DevToolsActivePort outside the workspace sandbox). `verified` stays empty so release preparation fails until a real browser check is recorded."
+    }
+  ]
+}
