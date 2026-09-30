@@ -91,7 +91,7 @@ None. The plugin registers no Tool, injects no prompt text and appends no Sessio
 
 | DSH version | Verification completed | Date |
 |---|---|---|
-| 0.1.7-rc.2 | Packed tarball installed into the `desktop` profile (`application: applied`); the Client module loaded in the real page and registered both slots as active occupants; the artifact loads through the host's module-envelope contract in tests | 2026-09-30 |
+| 0.2.0-rc.2 | Packed tarball installed into the `desktop` profile (`application: applied`); the Client module loaded in the real page and registered both slots as active occupants; the artifact loads through the host's module-envelope contract in tests | 2026-09-30 |
 
 **Not yet completed** (so `compatibility.json#verified` stays empty and `release:prepare` fails by design):
 
@@ -119,7 +119,7 @@ npm run check       # typecheck + test + pack:check
 
 The Client half is bundled by esbuild into **one** CommonJS file (`src/client/index.ts` → `lib/client.js`) with only baseline `react` external: the module envelope's `require` resolves the browser module table alone, so a relative `require('./store.js')` would not resolve at runtime. `tests/client-bundle.spec.ts` loads the artifact the way the shell does and fails if a second dependency appears.
 
-Contract queries (2026-09-30, DSH `0.1.7-rc.2`):
+Contract queries (2026-09-30, DSH `0.2.0-rc.2`):
 
 - `Slots.listSubTree`: `conversation.composer.dock` (list, session scope, registration `id`/`order`/`label`), `settings.section` (list, root scope, ownerProps `{ close }`).
 - Client `Service`: `slots` (`inject`/`register`), `locale` (`register(ns, locale, dict)`/`bind(ns)`/`getLocale`/`subscribe`).

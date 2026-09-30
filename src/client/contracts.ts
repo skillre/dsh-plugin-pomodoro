@@ -1,7 +1,7 @@
 /**
  * Structural mirrors of the DSH Client contracts this bundle consumes.
  *
- * Queried from the live runtime on 2026-09-30 (DSH `0.1.7-rc.2`):
+ * Queried from the live runtime on 2026-09-30 (DSH `0.2.0-rc.2`):
  * `Slots.listSubTree` for `conversation.composer.dock` and `settings.section`,
  * the Client `Service` catalog for `slots` and `locale`, and
  * `Builtin.listBuiltins` for the restricted `ctx` face.

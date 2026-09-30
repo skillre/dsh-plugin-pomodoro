@@ -5,7 +5,7 @@
 - GitHub: `skillre/dsh-plugin-pomodoro`
 - npm: `@skillre/dsh-plugin-pomodoro`
 - Fleet slug: `pomodoro`
-- Initial DSH observation: `0.1.7-rc.2` on `2026-09-30`
+- Initial DSH observation: `0.2.0-rc.2` on `2026-09-30`
 - Status: experimental
 
 This repository is an independent Git and npm release unit. Its parent fleet instructions are not automatically inherited because this repository's `.git` is the project root; this file is therefore self-contained.

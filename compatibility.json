@@ -4,7 +4,7 @@
   "verified": [],
   "observations": [
     {
-      "dsh": "0.1.7-rc.2",
+      "dsh": "0.2.0-rc.2",
       "observedAt": "2026-09-30",
       "install": "packed tarball installed into the `desktop` profile via plugin_manager install_bundle; application: applied",
       "checks": ["artifact-envelope", "live-client-slots"],

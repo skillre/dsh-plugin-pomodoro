@@ -91,7 +91,7 @@ DSH 读取插件卡片信息时**不激活插件**，所以这些资源随包发
 
 | DSH 版本 | 已完成的验证 | 日期 |
 |---|---|---|
-| 0.1.7-rc.2 | 打包 tarball 装入 `desktop` profile（`application: applied`）；客户端模块在真实页面加载并把两个 slot 注册为 active occupant；产物按宿主模块信封契约在测试中加载通过 | 2026-09-30 |
+| 0.2.0-rc.2 | 打包 tarball 装入 `desktop` profile（`application: applied`）；客户端模块在真实页面加载并把两个 slot 注册为 active occupant；产物按宿主模块信封契约在测试中加载通过 | 2026-09-30 |
 
 **尚未完成**（因此 `compatibility.json#verified` 保持为空，`release:prepare` 会按设计失败）：
 
@@ -119,7 +119,7 @@ npm run check       # typecheck + test + pack:check
 
 Client 半边用 esbuild 打包成**一个** CommonJS 文件（`src/client/index.ts` → `lib/client.js`），只有 baseline `react` 是 external；原因是模块信封里的 `require` 只能解析浏览器模块表，相对 `require('./store.js')` 在运行时无法解析。`tests/client-bundle.spec.ts` 会按宿主的方式加载产物，一旦多出第二个依赖就失败。
 
-契约查询记录（2026-09-30，DSH `0.1.7-rc.2`）：
+契约查询记录（2026-09-30，DSH `0.2.0-rc.2`）：
 
 - `Slots.listSubTree`：`conversation.composer.dock`（list，session scope，注册参数 `id`/`order`/`label`）、`settings.section`（list，root scope，ownerProps `{ close }`）。
 - Client `Service`：`slots`（`inject`/`register`）、`locale`（`register(ns, locale, dict)`/`bind(ns)`/`getLocale`/`subscribe`）。

@@ -5,7 +5,7 @@
  * by `scripts/build-client.mjs`; the only runtime import is the baseline
  * `react` module served by the browser module table.
  *
- * Contracts consumed (queried 2026-09-30 on DSH `0.1.7-rc.2`):
+ * Contracts consumed (queried 2026-09-30 on DSH `0.2.0-rc.2`):
  * - `conversation.composer.dock` — list slot, registration `{ name, id, order, label? }`.
  * - `settings.section` — list slot, registration `{ name, id, order, label? }`.
  * - services `slots` and `locale`, declared as hard dependencies below.
